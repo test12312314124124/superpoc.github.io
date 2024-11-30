@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Link in New Tab</title>
+</head>
+<body>
+    <button id="openLinkButton">Open Link in New Tab</button>
+
+    <script>
+        document.getElementById('openLinkButton').addEventListener('click', function() {
+            window.open('https://lp.ozon.ru/api/webinar-api/client/v1/stream/subscribe?streamId=2858', '_blank');
+        });
+    </script>
+</body>
+</html>
